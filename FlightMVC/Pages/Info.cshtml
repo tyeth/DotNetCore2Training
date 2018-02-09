@@ -1,0 +1,13 @@
+﻿@page
+@model FlightMVC.Pages.InfoModel
+@{
+    ViewData["Title"] = "Info";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Info</h2>
+<form asp-page="Info">
+    <input asp-for="Message" />
+    <input type="submit" />
+
+</form>

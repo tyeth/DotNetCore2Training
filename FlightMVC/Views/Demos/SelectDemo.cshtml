@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewData["Title"] = "SelectDemo";
+}
+
+<h2>SelectDemo</h2>
+
+<select asp-items="ViewBag.Items"></select>
+<select asp-items='@(ViewData["Items"] as List<SelectListItem>)'></select>

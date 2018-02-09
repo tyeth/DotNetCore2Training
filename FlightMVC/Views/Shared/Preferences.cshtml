@@ -1,0 +1,21 @@
+﻿@model FlightMVC.Models.Preferences
+
+<div>
+    <h4>Preferences Partial</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label asp-for="Food"></label>
+        </dt>
+        <dd>
+            <p asp-for="Food"></p>
+        </dd>
+        <dt>
+            <label asp-for="ExtraLegRoom"></label>
+        </dt>
+        <dd>
+            <input type="checkbox" asp-for="ExtraLegRoom" />
+            <p asp-for="ExtraLegRoom"></p>
+        </dd>
+    </dl>
+</div>

@@ -1,0 +1,22 @@
+﻿@model FlightMVC.Models.PassengerDetails
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>PassengerDetails</h4>
+<hr />
+<div class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+@Html.EditorForModel()
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

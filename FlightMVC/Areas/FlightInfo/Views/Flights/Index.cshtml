@@ -1,0 +1,46 @@
+﻿@model IEnumerable<FlightMVC.Areas.FlightInfo.Models.Flight>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+    <a asp-action="Create">Create New</a>
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FlightNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Origin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Destination)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlightNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Origin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destination)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.FlightNo }) |
+                <a asp-action="Details" asp-route-id="@item.FlightNo">tAGhELPER DETAILS(NO CONTROLLER OR AREA SPECIFIED)</a> |
+                @Html.ActionLink("Details", "Details", new { id = item.FlightNo }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.FlightNo })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

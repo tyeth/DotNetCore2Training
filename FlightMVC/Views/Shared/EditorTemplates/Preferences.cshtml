@@ -1,0 +1,15 @@
+﻿@model FlightMVC.Models.Preferences
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Food" class="control-label"></label>
+                <input asp-for="Food" class="form-control" />
+                <span asp-validation-for="Food" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="ExtraLegRoom" /> @Html.DisplayNameFor(model => model.ExtraLegRoom)
+                    </label>
+                </div>
+            </div>
+

@@ -1,0 +1,23 @@
+﻿
+@{
+
+    @using Microsoft.Extensions.Logging;
+    @inject ILoggerFactory loggerFactory;
+
+    ILogger logger = loggerFactory.CreateLogger("***** <><><> InViewActionFilterDemoLogger");
+    logger.LogInformation("*************************** Im in the view **************************");
+    logger.LogInformation("*************************** ************** **************************");
+
+}
+
+<h1>I'm a useless action, try me with a querystring <a href="/theRoot/Action?boo=casper">boo=casper</a> or <a href="/theRoot/Action?primes=true">primes=true</a></h1>
+
+@if (ViewBag.Primes as List<int> != null) {
+<p>Primes</p>
+<ol>
+    @foreach (var item in ViewBag.Primes as List<int>)
+    {
+        <li>@item</li>
+    }
+</ol>
+}

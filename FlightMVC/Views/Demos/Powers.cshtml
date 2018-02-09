@@ -1,0 +1,58 @@
+﻿@using FlightMVC.Models.ViewModels;
+@model IEnumerable<NumPowersVM>
+
+@{
+    ViewData["Title"] = "Powers";
+}
+<style>
+    thead>tr>td {
+        padding:5px !important;
+    }
+</style>
+<h2>Powers</h2>
+<div class="row">
+
+    <table class="table-bordered">
+        <thead>
+            <tr>
+                <td>Number</td>
+                <td>Square</td>
+                <td>cube</td>
+                <td>power of i</td>
+            </tr>
+        </thead>
+        @for (int i = 0; i < 10; i++)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@(i * i)</td>
+                <td>@(i * i * i)</td>
+                <td>@Math.Pow(i, i)</td>
+            </tr>
+        }
+
+    </table>
+<hr />
+    <table class="table-bordered">
+        <thead>
+            <tr>
+                <td>Number</td>
+                <td>Square</td>
+                <td>cube</td>
+                <td>power of i</td>
+            </tr>
+        </thead>
+      @foreach (var item in Model)
+      {
+            <tr>
+                <td>@item.Num</td>
+                <td>@(item.Square)</td>
+                <td>@(item.Cube)</td>
+                <td>@item.PowerOfNum</td>
+            </tr>
+        }
+
+    </table>
+
+
+</div>

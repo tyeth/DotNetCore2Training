@@ -1,0 +1,23 @@
+﻿@model UploadFilesDTO
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<form asp-action="UploadDemo" enctype="multipart/form-data">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <label>Single File</label><input type="file" name="file" />
+    <br />
+    <label>Many Files</label><input type="file" name="files" multiple />
+    <br />
+    <input type="submit" />
+</form>
+
+@if (ViewBag.Results != null)
+{
+<ol>
+    @foreach (var item in ViewBag.Results)
+    {
+        <li>@item</li>
+    }
+</ol>
+}

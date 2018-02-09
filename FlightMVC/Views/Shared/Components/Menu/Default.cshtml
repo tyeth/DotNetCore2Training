@@ -1,0 +1,17 @@
+﻿@model Preferences
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div>
+    <p asp-for="Food"></p>
+</div>
+
+<div class="navbar navbar-collapse">
+<ul class="nav navbar-nav">
+    <li><a asp-area="" asp-controller="Demos" asp-action="Powers">Demo</a></li>
+    <li><a asp-area="" asp-controller="Passengers" asp-action="Index">PassengersRep</a></li>
+    <li><a asp-area="" asp-controller="PassengersRep" asp-action="Index">Passengers</a></li>
+    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+</ul>
+</div>

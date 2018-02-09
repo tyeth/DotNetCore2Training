@@ -1,0 +1,44 @@
+﻿@model Tuple<FlightMVC.Models.PassengerDetails, FlightMVC.Models.PassengerDetails>
+
+@{
+    ViewData["Title"] = "Changes";
+    var pdOld = Model.Item1;
+    var pdNew = Model.Item2;
+
+}
+
+<h2>Changes</h2>
+
+<div>
+    <h4>PassengerDetails</h4>
+    <hr />
+  
+    @{
+
+        <div class="col-md-6">
+            @Html.DisplayFor(model => model.Item1)
+
+        </div>
+
+        <div class="col-md-6">
+            @Html.DisplayFor(model => model.Item2)
+
+        </div>
+
+        @*<dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Item1.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Item1.Name)  =&gt; @Html.DisplayFor(model => model.Item2.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Item1.Weight)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Item1.Weight)  =&gt; @Html.DisplayFor(model => model.Item2.Weight)
+            </dd>
+        </dl>*@
+
+    }
+</div>

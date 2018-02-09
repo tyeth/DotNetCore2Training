@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlightMVC</name>
+    </assembly>
+    <members>
+        <member name="M:FlightMVC.Controllers.PassengersAPIController.Get(System.String)">
+            <summary>
+            Get a list of potential passengers for adding to a flight
+            </summary>
+            <param name="id">The unique name of the passenger</param>
+            <returns>Http Status 200 on success.</returns>
+        </member>
+    </members>
+</doc>
